@@ -1,0 +1,243 @@
+/* header */
+
+.pin {
+    width: 35px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 120px;
+    margin-left: 35px;
+}
+
+.logo pin{
+    font-size: 32px;
+
+}
+
+.links {
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+
+.boton  {
+    color: #111;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 900;
+    letter-spacing: 1;
+    font-size: 25px;
+    font-weight: lighter;
+    
+
+}
+
+.boton-inicio {
+    color: #111;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 900;
+    letter-spacing: 1;
+    border: 5px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 10px;
+    padding: 10px;
+}
+
+.serch {
+    width: 800px;
+    height: 55px;
+    background: #e4e4e4;
+    border-radius: 80px;
+    padding:0 20px;
+}
+
+.serch input {
+    border: none;
+    background-color: transparent;
+    height: 80%;
+    height: 100%;
+    outline: none;
+    padding: 0, 10px;
+    font-size: 16px;
+    margin: 0, 10px;
+
+}
+
+svg {
+    width: 50px;
+}
+
+.tam {
+    width: 35px;
+    
+}
+
+.icons {
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   gap: 25px;
+    cursor: pointer; /* volver boton */
+}
+
+
+
+/* imagenes pinterst */
+
+.wrapper-card {
+    padding: 1rem;
+    max-width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+    justify-content: center;
+    grid-template-rows: masonry;
+    gap: 10px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .card {
+    width: 236px;
+    height: 450px;
+    border-radius: 15px;
+    margin: 2rem;
+    position: relative;
+  }
+  
+  .card img {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-out;
+  }
+  
+  .card:hover::before {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .card:hover button {
+    display: inline-flex;
+  }
+  
+  .card:hover .lowermenu {
+    display: flex;
+  }
+  
+  .card:nth-child(3n) {
+    height: 555px;
+  }
+  
+  .card:nth-child(2n + 2) {
+    height: 366px;
+  }
+  
+  .card:nth-child(5n) {
+    height: 400px;
+  }
+  
+ 
+  .menu-superior {
+    position: absolute;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 25px;
+    top: 15px;
+    right: 10px;
+    border-style: none;
+    display: none;
+  }
+  
+  
+  
+  .lowermenu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-end;
+    width: 100%;
+    bottom: 10px;
+    border-style: none;
+    text-decoration: none;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: none;
+  }
+  
+  
+  .lowermenu button {
+    padding: 10px;
+    background-color: rgb(105, 97, 97);
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: none;
+  }
+  
+  .lowermenu button a {
+    text-decoration: none;
+    border-style: none;
+    color: white;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    nav {
+      display: none;
+    }
+  }
+  
+
+
+
+/* media query (adapta las imagenes de acuerdo al tamaño de la mantalla o espacio en el que tengan para acomodarse con max-withd 100 %)*/
+@media only screen and (max-width: 800px) {
+    nav {
+      display: none;
+    }
+  }
+  
+
+@media (max-width: 1100px) { /* Se adapta al 100% dependiendo la pantalla */ /* y pasa de mostrar en 4 columnas a mostrar en 3 */
+    .contenedor .card-image .header {
+        width: 100%;
+
+    }
+
+@media (max-width:800px){
+    .header {
+        width: 100%;
+    }
+    
+}    
+    .contenedor {
+        width: calc(100%-50px);
+        columns: 3;
+    }
+}
+
+@media (max-width: 800px) { 
+    .contenedor {
+        columns: 2;
+    }
+}
